@@ -35,6 +35,21 @@ body {
   padding: 0 6px;
 }
 
+header {
+  margin-bottom: 1em;
+  #logo {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+footer {
+  margin-top: 1em;
+  padding-top: 1em;
+  border-top: 1px solid;
+  text-align: center;
+}
+
 #nav {
   margin: 1px 0 7px 0;
   padding: 0;
