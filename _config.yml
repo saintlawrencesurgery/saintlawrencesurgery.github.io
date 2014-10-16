@@ -1,1 +1,4 @@
 application_title: St. Lawrence Surgery
+
+sass:
+  sass_dir: _scss

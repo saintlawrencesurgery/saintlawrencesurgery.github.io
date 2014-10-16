@@ -2,7 +2,7 @@
   <meta charset="UTF-8">
 
   <title>
-    {% if page.title  %}
+    {% if page.title %}
       {{ page.title }} |
     {% endif %}
     {{ site.application_title }}
@@ -12,4 +12,9 @@
 
   <link rel="stylesheet" type="text/css" href="/css/normalize.css">
   <link rel="stylesheet" type="text/css" href="/css/styles.css">
+
+  {% if page.uses_google_maps %}
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+  {% endif %}
+
 </head>

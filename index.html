@@ -2,8 +2,72 @@
 layout: default
 title: Home
 nav_id: home
+uses_google_maps: t # we only check that this isn't nil, it doesn't matter what is set
 ---
 
 <section class="intro">
-  <h1>This Page is under construction!</h1>
+  <p>
+    St. Lawrence Surgery&#39;s main office is located in Ogdensburg, NY with offices also located in Canton, NY and Alexandria Bay, NY.
+  </p>
+  <p>
+    There are 4 general surgeons on staff&mdash;Dr. Christopher Brandy, Dr. Kiri Brandy, Dr. Noah Zucker, and Dr. Karen Galvan
+  </p>
 </section>
+
+<section class="action">
+  <div class="inner">
+    Call 315-393-2611 for an appointment -- no referral is necessary
+  </div>
+</section>
+
+<section class="locations">
+  <h2>3 Office Locations</h2>
+
+  <table>
+    <tr>
+      <th>3 Lyon Place<br>Ogdensburg, NY</th>
+      <th>39 West Main St. <br>Canton, NY</th>
+      <th>6 Fuller St.<br>Alexandria Bay, NY</th>
+    </tr>
+    <tr>
+      <td>
+        <div id="map_canvas_1" class="map_canvas"></div>
+      </td>
+      <td>
+        <div id="map_canvas_2" class="map_canvas"></div>
+      </td>
+      <td>
+        <div id="map_canvas_3" class="map_canvas"></div>
+      </td>
+    </tr>
+  </table>
+</section>
+
+
+<script>
+  function initializeGMaps() {
+    initializeMap('map_canvas_1', 44.6904289657096000, -75.4991170000000980, 'St. Lawrence Surgery');
+    initializeMap('map_canvas_2', 44.5941240156569020, -75.1800389000000000, 'Claxton Hepburn Physcians and Imaging');
+    initializeMap('map_canvas_3', 44.3369742155170030, -75.9205386499999970, 'River Hospital Clinic');
+  }
+
+  function initializeMap(map_id, lat, lng, title) {
+    var mapCanvas = document.getElementById(map_id);
+    var location = new google.maps.LatLng(lat, lng)
+
+    var mapOptions = {
+      center: location,
+      zoom: 16,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+    var map = new google.maps.Map(mapCanvas, mapOptions)
+
+    var marker = new google.maps.Marker({
+      position: location,
+      map: map,
+      title: title
+    });
+  }
+
+  google.maps.event.addDomListener(window, 'load', initializeGMaps);
+</script>

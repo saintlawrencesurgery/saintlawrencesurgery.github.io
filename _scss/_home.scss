@@ -1,0 +1,40 @@
+section.intro {
+  margin: 1em 5em;
+  padding: .5em 2em;
+  background-color: #fff;
+}
+
+section.action {
+  margin: 1em 3em;
+  padding: .25em .75em;
+  background-color: #ffffff;
+  .inner {
+    padding: 1.5em 2em;
+    background-color: #ccc;
+  }
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.125em;
+}
+
+section.locations {
+  margin: 1em 5em;
+  padding: .5em 2em;
+  background-color: #fff;
+  h2 {
+    text-align: center;
+    border-bottom: 1px solid;
+    padding-bottom: .5em;
+  }
+  table {
+    width: 100%;
+    th, td {
+      text-align: center;
+      .map_canvas {
+        margin: 0 auto;
+        width: 150px;
+        height: 150px;
+      }
+    }
+  }
+}
