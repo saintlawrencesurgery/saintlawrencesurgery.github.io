@@ -1,14 +1,14 @@
 <ul id="nav">
-  <li class="selected">
-    <a href='{{ site.baseurl }}'>Home</a>
+  <li {% if page.nav_id == 'home' %} class="selected" {% endif %}>
+    <a href='{{ site.baseurl }}/'>Home</a>
   </li>
-  <li>
-    <a href='about.html'>Doctors and Physician Assistants</a>
+  <li {% if page.nav_id == 'about' %} class="selected" {% endif %}>
+    <a href='{{ site.baseurl }}/about'>Doctors and Physician Assistants</a>
   </li>
-  <li>
-    <a href='services.html'>Services Provided</a>
+  <li {% if page.nav_id == 'services' %} class="selected" {% endif %}>
+    <a href='{{ site.baseurl }}/services'>Services Provided</a>
   </li>
-  <li>
-    <a href='contact.html'>Contact Us</a>
+  <li {% if page.nav_id == 'contact' %} class="selected" {% endif %}>
+    <a href='{{ site.baseurl }}/contact'>Contact Us</a>
   </li>
 </ul>
