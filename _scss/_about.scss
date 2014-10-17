@@ -1,0 +1,12 @@
+section.physicians {
+  margin: 1em 5em;
+  padding: .5em;
+  width: 20em;
+  .physician {
+    padding-left: 1em;
+    display: block;
+    img {
+      vertical-align: middle;
+    }
+  }
+}
