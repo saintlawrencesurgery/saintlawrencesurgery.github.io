@@ -1,0 +1,28 @@
+#services_container {
+  overflow: auto;
+}
+
+#services_nav {
+  float: left;
+  width: 20em;
+  cursor: pointer;
+  ul {
+    list-style-type: none;
+    li.selected, li:hover {
+      background-color: #919191;
+      color: white;
+      &:after {
+        content: "\2192";
+      }
+    }
+  }
+}
+
+#service_descriptions {
+  margin-left: 20em;
+  padding-left: 1em;
+  border-left: 3px solid #919191;
+  div {
+    display: none;
+  }
+}

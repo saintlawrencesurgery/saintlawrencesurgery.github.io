@@ -4,6 +4,90 @@ title: Services Provided
 nav_id: services
 ---
 
-<section class="intro">
-  <h1>This Page is under construction!</h1>
-</section>
+<div id="services_container">
+  <nav id="services_nav">
+    <ul>
+      <li data-desc-id="gallbladder">
+        Laparoscopic gallbladder surgery
+      </li>
+      <li data-desc-id="hernia">
+        Laparoscopic hernia repair
+      </li>
+      <li data-desc-id="colonoscopy">
+        Colonoscopy
+      </li>
+      <li data-desc-id="egd">
+        EGD
+      </li>
+      <li data-desc-id="bowel">
+        Bowel surgery
+      </li>
+      <li data-desc-id="breast">
+        Breast surgery
+      </li>
+      <li data-desc-id="vein">
+        Vein surgery
+      </li>
+      <li data-desc-id="skin_lesion">
+        Skin Lesion removal
+      </li>
+      <li data-desc-id="wart">
+        Laser wart removal
+      </li>
+      <li data-desc-id="spider_vein">
+        Laser spider vein removal
+      </li>
+    </ul>
+  </nav>
+
+  <section id="service_descriptions">
+    <div id="gallbladder">
+      comming soon...
+    </div>
+    <div id="hernia">
+      comming soon...
+    </div>
+    <div id="colonoscopy">
+      comming soon...
+    </div>
+    <div id="egd">
+      comming soon...
+    </div>
+    <div id="bowel">
+      comming soon...
+    </div>
+    <div id="breast">
+      comming soon...
+    </div>
+    <div id="vein">
+      comming soon...
+    </div>
+    <div id="skin_lesion">
+      comming soon...
+    </div>
+    <div id="wart">
+      comming soon...
+    </div>
+    <div id="spider_vein">
+      comming soon...
+    </div>
+  </section>
+</div>
+
+<script>
+  $(function() {
+    // on page load show the first description
+    $initServiceNav = $("#services_nav li:first-child");
+    $("#service_descriptions #" + $initServiceNav.data("desc-id")).show();
+    $initServiceNav.addClass('selected');
+
+    // Change services section on nav click
+    $("#services_nav").click("li", function(event) {
+      $("#service_descriptions div").hide();
+      $("#" + $(event.target).data("desc-id")).show();
+
+      $("#services_nav li").removeClass("selected")
+      $(event.target).addClass("selected")
+    });
+  });
+</script>
