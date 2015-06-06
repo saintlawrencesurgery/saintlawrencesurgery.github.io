@@ -4,10 +4,14 @@
 
 #services_nav {
   float: left;
-  width: 20em;
+  width: 18em;
   cursor: pointer;
   ul {
     list-style-type: none;
+    padding: 0;
+    li {
+      padding: .25em .1em;
+    }
     li.selected, li:hover {
       background-color: #919191;
       color: white;
@@ -19,7 +23,7 @@
 }
 
 #service_descriptions {
-  margin-left: 20em;
+  margin-left: 18em;
   padding-left: 1em;
   border-left: 3px solid #919191;
   div {
