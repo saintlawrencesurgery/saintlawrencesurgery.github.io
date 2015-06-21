@@ -25,9 +25,20 @@ uses_google_maps: t # we only check that this isn't nil, it doesn't matter what 
 
   <table>
     <tr>
-      <th>3 Lyon Place<br>Ogdensburg, NY</th>
+      <th>305 Main St.<br>Ogdensburg, NY</th>
       <th>39 West Main St. <br>Canton, NY</th>
       <th>6 Fuller St.<br>Alexandria Bay, NY</th>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://maps.google.com?daddr=305+Main+Street+Ogdensburg+NY+13669" target="_blank">directions &rarr;</a>
+      </td>
+      <td>
+        <a href="https://maps.google.com?daddr=39+West+Main+Street+Canton+NY+13617" target="_blank">directions &rarr;</a>
+      </td>
+      <td>
+        <a href="https://maps.google.com?daddr=6+Fuller+Street+Alexandria++Bay+NY+13607" target="_blank">directions &rarr;</a>
+      </td>
     </tr>
     <tr>
       <td>
@@ -46,7 +57,7 @@ uses_google_maps: t # we only check that this isn't nil, it doesn't matter what 
 
 <script>
   function initializeGMaps() {
-    initializeMap('map_canvas_1', 44.6904289657096000, -75.4991170000000980, 'St. Lawrence Surgery');
+    initializeMap('map_canvas_1', 44.693217, -75.501275, 'St. Lawrence Surgery');
     initializeMap('map_canvas_2', 44.5941240156569020, -75.1800389000000000, 'Claxton Hepburn Physcians and Imaging');
     initializeMap('map_canvas_3', 44.3369742155170030, -75.9205386499999970, 'River Hospital Clinic');
   }
