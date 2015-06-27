@@ -3,9 +3,12 @@
     <a href='{{ site.baseurl }}/'>Home</a>
   </li>
   <li {% if page.nav_id == 'about' %} class="selected" {% endif %}>
-    <a href='{{ site.baseurl }}/about'>Doctors and Physician Assistants</a>
+    <a href='{{ site.baseurl }}/about'>Drs/PAs</a>
   </li>
   <li {% if page.nav_id == 'services' %} class="selected" {% endif %}>
     <a href='{{ site.baseurl }}/services'>Services Provided</a>
+  </li>
+  <li {% if page.nav_id == 'patient_info' %} class="selected" {% endif %}>
+    <a href='{{ site.baseurl }}/patient_info'>Patient Information</a>
   </li>
 </ul>
