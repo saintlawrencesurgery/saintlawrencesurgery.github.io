@@ -3,12 +3,14 @@ section.physicians {
   padding: .5em;
   .physician {
     padding-left: 1em;
-    display: block;
+    display: inline-block;
+    min-width: 45%;
     margin: .5em;
     img {
       vertical-align: middle;
       padding: .25em;
       background-color: #fff;
+      border-radius: 14px;
     }
   }
 }
