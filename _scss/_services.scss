@@ -5,12 +5,26 @@
 #services_nav {
   float: left;
   width: 18em;
-  cursor: pointer;
+  border-right: 3px solid #919191;
+  .category {
+    .header {
+      background-color: #a1a1a1;
+      color: blue; // temporary
+      border-bottom: 3px solid #919191;
+      padding: .25em;
+      display: block;
+    }
+  }
   ul {
     list-style-type: none;
-    padding: 0;
+    padding: 0 0 0 1em;
+    cursor: pointer;
+    margin: .5em 0 1em 0;
     li {
-      padding: .25em .1em;
+      padding: .25em;
+      &.missing_info {
+        color: red
+      }
     }
     li.selected, li:hover {
       background-color: #919191;
@@ -25,7 +39,6 @@
 #service_descriptions {
   margin-left: 18em;
   padding-left: 1em;
-  border-left: 3px solid #919191;
   div {
     display: none;
   }

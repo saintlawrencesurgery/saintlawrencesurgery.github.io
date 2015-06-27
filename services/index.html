@@ -2,79 +2,189 @@
 layout: default
 title: Services Provided
 nav_id: services
+missing_desc: <p>Coming Soon...</p>
 ---
 
 <div id="services_container">
   <nav id="services_nav">
-    <ul>
-      <li data-desc-id="gallbladder">
-        Laparoscopic gallbladder surgery
-      </li>
-      <li data-desc-id="hernia">
-        Laparoscopic hernia repair
-      </li>
-      <li data-desc-id="appendectomy">
-        Appendectomy
-      </li>
-      <li data-desc-id="colorectal">
-        Screening &amp; surveillance for colorectal cancer
-      </li>
-      <li data-desc-id="hemorrhoids">
-        Hemorrhoids
-      </li>
-<!-- Removed for now
-      <li data-desc-id="ostomy">
-        Ostomy
-      </li>
-      <li data-desc-id="pilonidal">
-        Pilonidal disease
-      </li>
--->
-      <li data-desc-id="lumpectomy">
-        Lumpectomy
-      </li>
-      <li data-desc-id="mastectomy">
-        Mastectomy
-      </li>
-      <li data-desc-id="sentinel_node_biopsy">
-        Sentinel node biopsy
-      </li>
-      <li data-desc-id="axillary_node_dissection">
-        Axillary node dissection
-      </li>
-      <li data-desc-id="venus_reflux">
-        Venus Reflux
-      </li>
-      <li data-desc-id="egd">
-        EGD
-      </li>
-    </ul>
+    <div class="category">
+      <span class="header">General Surgery</span>
+      <ul>
+        <li data-desc-id="general_colon" class="missing_info">
+          Colon
+        </li>
+        <li data-desc-id="general_gallbladder" class="missing_info">
+          Gallbladder
+        </li>
+        <li data-desc-id="general_hernia" class="missing_info">
+          Hernia
+        </li>
+        <li data-desc-id="pilonidal_cyst" class="missing_info">
+          Pilonidal Cyst
+        </li>
+        <li data-desc-id="hemorrhoids">
+          Hemorrhoids
+        </li>
+        <li data-desc-id="amputation" class="missing_info">
+          Amputation
+        </li>
+      </ul>
+    </div>
+    <div class="category">
+      <span class="header">Laproscopic Surgery</span>
+      <ul>
+        <li data-desc-id="laparoscopic_gallbladder">
+          Gallbladder
+        </li>
+        <li data-desc-id="appendectomy">
+          Appendectomy
+        </li>
+        <li data-desc-id="laproscopic_hernia">
+          Hernia
+        </li>
+      </ul>
+    </div>
+    <div class="category">
+      <span class="header">Colonoscopy/EGD</span>
+      <ul>
+        <li data-desc-id="colonoscopy" class="missing_info">
+          Colonoscopy
+        </li>
+        <li data-desc-id="egd">
+          EGD
+        </li>
+        <li data-desc-id="colon_screening">
+          Colon Screening Info
+        </li>
+      </ul>
+    </div>
+    <div class="category">
+      <span class="header">Vein Surgery</span>
+      <ul>
+        <li data-desc-id="venus_reflux">
+          Venus Reflux Condition
+        </li>
+        <li data-desc-id="ablation" class="missing_info">
+          Ablation
+        </li>
+        <li data-desc-id="ligation" class="missing_info">
+          Ligation
+        </li>
+      </ul>
+    </div>
+    <div class="category">
+      <span class="header">Breast Surgery/Biopsy</span>
+      <ul>
+        <li data-desc-id="breast_biopsies" class="missing_info">
+          Biopsies
+        </li>
+        <li data-desc-id="lumpectomy">
+          Lumpectomy
+        </li>
+        <li data-desc-id="mastectomy">
+          Mastectomy
+        </li>
+        <li data-desc-id="sentinel_node_biopsy">
+          Sentinel node biopsy
+        </li>
+        <li data-desc-id="axillary_node_dissection">
+          Axillary node dissection
+        </li>
+      </ul>
+    </div>
+    <div class="category">
+      <span class="header">Outpatient Biopsy</span>
+      <ul>
+        <li data-desc-id="general_outpatient_biopsy" class="missing_info">
+          General Biopsy
+        </li>
+        <li data-desc-id="aspiration" class="missing_info">
+          Aspiration
+        </li>
+      </ul>
+    </div>
+    <div class="category">
+      <span class="header">Skin Legions</span>
+      <ul>
+        <li data-desc-id="skin_cancer_types" class="missing_info">
+          Skin Cancer Types
+        </li>
+      </ul>
+    </div>
+    <div class="category">
+      <span class="header">Laser</span>
+      <ul>
+        <li data-desc-id="warts" class="missing_info">
+          Warts
+        </li>
+        <li data-desc-id="spider_veins" class="missing_info">
+          Spider Veins
+        </li>
+        <li data-desc-id="cosmetic" class="missing_info">
+          Cosmetic
+        </li>
+      </ul>
+    </div>
   </nav>
 
   <section id="service_descriptions">
-    <div id="gallbladder">
-      {% include services/gallbladder_surgery.html %}
+    <!-- General Surgery -->
+    <div id="general_colon">
+      {{ page.missing_desc }}
     </div>
-    <div id="hernia">
-      {% include services/hernia_surgery.html %}
+    <div id="general_gallbladder">
+      {{ page.missing_desc }}
     </div>
-    <div id="appendectomy">
-      {% include services/appendectomy.html %}
+    <div id="general_hernia">
+      {{ page.missing_desc }}
     </div>
-    <div id="colorectal">
-      {% include services/colorectal.html %}
+    <div id="pilonidal_cyst">
+      {{ page.missing_desc }}
     </div>
     <div id="hemorrhoids">
       {% include services/hemorrhoids.html %}
     </div>
-<!-- Removed for now
-    <div id="ostomy">
-      {% include services/ostomy.html %}
+    <div id="amputation">
+      {{ page.missing_desc }}
     </div>
-    <div id="pilonidal">
-      {% include services/pilonidal.html %}
+
+    <!-- Laproscopic Surgery -->
+    <div id="laparoscopic_gallbladder">
+      {% include services/gallbladder_surgery.html %}
     </div>
--->
+    <div id="appendectomy">
+      {% include services/appendectomy.html %}
+    </div>
+    <div id="laproscopic_hernia">
+      {% include services/hernia_surgery.html %}
+    </div>
+
+    <!-- Colonoscopy/EGD -->
+    <div id="colonoscopy">
+      {{ page.missing_desc }}
+    </div>
+    <div id="egd">
+      {% include services/egd.html %}
+    </div>
+    <div id="colon_screening">
+      {% include services/colorectal.html %}
+    </div>
+
+    <!-- Vein Surgery -->
+    <div id="venus_reflux">
+      {% include services/venus_reflux.html %}
+    </div>
+    <div id="ablation">
+      {{ page.missing_desc }}
+    </div>
+    <div id="ligation">
+      {{ page.missing_desc }}
+    </div>
+
+    <!-- Breast Surgery/Biopsy -->
+    <div id="breast_biopsies">
+      {{ page.missing_desc }}
+    </div>
     <div id="lumpectomy">
       {% include services/lumpectomy.html %}
     </div>
@@ -87,29 +197,56 @@ nav_id: services
     <div id="axillary_node_dissection">
       {% include services/axillary_node_dissection.html %}
     </div>
-    <div id="venus_reflux">
-      {% include services/venus_reflux.html %}
+
+    <!-- Outpatient Biopsy -->
+    <div id="general_outpatient_biopsy">
+      {{ page.missing_desc }}
     </div>
-    <div id="egd">
-      {% include services/egd.html %}
+    <div id="aspiration">
+      {{ page.missing_desc }}
     </div>
+
+    <!-- Skin Legions -->
+    <div id="skin_cancer_types">
+      {{ page.missing_desc }}
+    </div>
+
+    <!-- Laser -->
+    <div id="warts">
+      {{ page.missing_desc }}
+    </div>
+    <div id="spider_veins">
+      {{ page.missing_desc }}
+    </div>
+    <div id="cosmetic">
+      {{ page.missing_desc }}
+    </div>
+
+<!-- Removed for now
+    <div id="ostomy">
+      {% include services/ostomy.html %}
+    </div>
+    <div id="pilonidal">
+      {% include services/pilonidal.html %}
+    </div>
+-->
   </section>
 </div>
 
 <script>
   $(function() {
     // on page load show the first description
-    $initServiceNav = $("#services_nav li:first-child");
+    $initServiceNav = $("#services_nav .category:first-child li:first-child");
     $("#service_descriptions #" + $initServiceNav.data("desc-id")).show();
     $initServiceNav.addClass('selected');
 
     // Change services section on nav click
-    $("#services_nav").click("li", function(event) {
+    $("#services_nav").on("click", "li", function() {
       $("#service_descriptions div").hide();
-      $("#" + $(event.target).data("desc-id")).show();
+      $("#" + $(this).data("desc-id")).show();
 
       $("#services_nav li").removeClass("selected")
-      $(event.target).addClass("selected")
+      $(this).addClass("selected")
     });
   });
 </script>
