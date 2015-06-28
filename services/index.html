@@ -75,7 +75,7 @@ missing_desc: <p>Coming Soon...</p>
     <div class="category">
       <span class="header">Breast Surgery/Biopsy</span>
       <ul>
-        <li data-desc-id="breast_biopsies" class="missing_info">
+        <li data-desc-id="breast_biopsy">
           Biopsies
         </li>
         <li data-desc-id="lumpectomy">
@@ -182,8 +182,8 @@ missing_desc: <p>Coming Soon...</p>
     </div>
 
     <!-- Breast Surgery/Biopsy -->
-    <div id="breast_biopsies">
-      {{ page.missing_desc }}
+    <div id="breast_biopsy">
+      {% include services/breast_biopsy.html %}
     </div>
     <div id="lumpectomy">
       {% include services/lumpectomy.html %}
