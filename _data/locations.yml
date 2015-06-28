@@ -1,0 +1,23 @@
+- name: St. Lawrence Surgery
+  address_1: 305 Main St.
+  city: Ogdensburg
+  state: NY
+  google_search_param: 305+Main+Street+Ogdensburg+NY+13669
+  lat: 44.693217
+  lng: -75.501275
+
+- name: Claxton Hepburn Physicians and Imaging
+  address_1: 39 West Main st.
+  city: Canton
+  state: NY
+  google_search_param: 39+West+Main+Street+Canton+NY+13617
+  lat: 44.5941240156569020
+  lng: -75.1800389000000000
+
+- name: River Hospital Clinic
+  address_1: 6 Fuller St.
+  city: Alexandria Bay
+  state: NY
+  google_search_param: 6+Fuller+Street+Alexandria+Bay+NY+13607
+  lat: 44.3369742155170030
+  lng: -75.9205386499999970

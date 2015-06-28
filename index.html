@@ -21,63 +21,42 @@ uses_google_maps: t # we only check that this isn't nil, it doesn't matter what 
 </section>
 
 <section class="locations">
-  <h2>3 Office Locations</h2>
+  <h2>{{ site.data.locations | size }} Office Locations</h2>
 
-  <table>
-    <tr>
-      <th>305 Main St.<br>Ogdensburg, NY</th>
-      <th>39 West Main St. <br>Canton, NY</th>
-      <th>6 Fuller St.<br>Alexandria Bay, NY</th>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://maps.google.com?daddr=305+Main+Street+Ogdensburg+NY+13669" target="_blank">directions &rarr;</a>
-      </td>
-      <td>
-        <a href="https://maps.google.com?daddr=39+West+Main+Street+Canton+NY+13617" target="_blank">directions &rarr;</a>
-      </td>
-      <td>
-        <a href="https://maps.google.com?daddr=6+Fuller+Street+Alexandria++Bay+NY+13607" target="_blank">directions &rarr;</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div id="map_canvas_1" class="map_canvas"></div>
-      </td>
-      <td>
-        <div id="map_canvas_2" class="map_canvas"></div>
-      </td>
-      <td>
-        <div id="map_canvas_3" class="map_canvas"></div>
-      </td>
-    </tr>
-  </table>
+  <div class="location_container">
+    {% for location in site.data.locations %}
+      <div class="location">
+        <div class="address">
+          {{ location.address_1 }}<br/>
+          {{ location.city }}, {{ location.state }}
+        </div>
+        <div id="map_canvas_{{ forloop.index }}" class="map_canvas"></div>
+        <a href="https://maps.google.com?daddr={{ location.google_search_param }}" target="_blank">directions &rarr;</a>
+      </div>
+    {% endfor %}
+  </div>
 </section>
 
 
 <script>
   function initializeGMaps() {
-    initializeMap('map_canvas_1', 44.693217, -75.501275, 'St. Lawrence Surgery');
-    initializeMap('map_canvas_2', 44.5941240156569020, -75.1800389000000000, 'Claxton Hepburn Physcians and Imaging');
-    initializeMap('map_canvas_3', 44.3369742155170030, -75.9205386499999970, 'River Hospital Clinic');
-  }
+    {% for location in site.data.locations %}
+      var mapCanvas = document.getElementById("map_canvas_{{ forloop.index }}");
+      var location_coord = new google.maps.LatLng({{ location.lat }}, {{ location.lng }})
 
-  function initializeMap(map_id, lat, lng, title) {
-    var mapCanvas = document.getElementById(map_id);
-    var location = new google.maps.LatLng(lat, lng)
+      var mapOptions = {
+        center: location_coord,
+        zoom: 16,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      }
+      var map = new google.maps.Map(mapCanvas, mapOptions)
 
-    var mapOptions = {
-      center: location,
-      zoom: 16,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    }
-    var map = new google.maps.Map(mapCanvas, mapOptions)
-
-    var marker = new google.maps.Marker({
-      position: location,
-      map: map,
-      title: title
-    });
+      var marker = new google.maps.Marker({
+        position: location_coord,
+        map: map,
+        title: "{{ location.name }}"
+      });
+    {% endfor %}
   }
 
   google.maps.event.addDomListener(window, 'load', initializeGMaps);
