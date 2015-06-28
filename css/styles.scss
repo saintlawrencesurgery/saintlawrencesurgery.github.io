@@ -18,21 +18,19 @@ body {
   margin: 0 auto;
   width: 1000px;
   min-height: 100%;
-  background-image: url("images/body-left.png"), url("images/body-right.png");
-  background-repeat:  repeat-y;
-  background-position: top left, top right;
+  border: 1px solid rgba(255, 255, 255, .5);
+  box-shadow: 0 0 8px 10px rgba(255, 255, 255, 0.36);
 }
 
 #content-container {
   position: relative;
-  width: 960px;
   margin: 0 20px 0 20px;
 }
 
 #main {
   position: relative;
   text-align: left;
-  padding: 0 6px;
+  padding: 0;
 }
 
 header {
@@ -45,7 +43,7 @@ header {
 
 footer {
   margin-top: 1em;
-  padding-top: 1em;
+  padding: 1em 0;
   border-top: 1px solid;
   text-align: center;
 }
