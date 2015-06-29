@@ -9,28 +9,40 @@
   .category {
     .header {
       background-color: #a1a1a1;
-      color: blue; // temporary
+      color: blue;
       border-bottom: 3px solid #919191;
       padding: .25em;
       display: block;
-    }
-  }
-  ul {
-    list-style-type: none;
-    padding: 0 0 0 1em;
-    cursor: pointer;
-    margin: .5em 0 1em 0;
-    li {
-      padding: .25em;
-      &.missing_info {
-        color: red
+      cursor: pointer;
+      &:before {
+        content: "\2212"
       }
     }
-    li.selected, li:hover {
-      background-color: #919191;
-      color: white;
-      &:after {
-        content: "\2192";
+    ul {
+      list-style-type: none;
+      padding: 0 0 0 1em;
+      cursor: pointer;
+      margin: .5em 0 1em 0;
+      li {
+        padding: .25em;
+        &.missing_info {
+          color: red
+        }
+      }
+      li.selected, li:hover {
+        background-color: #919191;
+        color: white;
+        &:after {
+          content: "\2192";
+        }
+      }
+    }
+    &.closed {
+      .header:before {
+        content: "\002B"
+      }
+      ul {
+        display: none;
       }
     }
   }

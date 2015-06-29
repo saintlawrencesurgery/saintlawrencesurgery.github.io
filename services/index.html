@@ -236,9 +236,13 @@ missing_desc: <p>Coming Soon...</p>
 <script>
   $(function() {
     // on page load show the first description
-    $initServiceNav = $("#services_nav .category:first-child li:first-child");
+    $initServiceNav = $("#services_nav li:not(.missing_info):first");
     $("#service_descriptions #" + $initServiceNav.data("desc-id")).show();
     $initServiceNav.addClass('selected');
+
+    // Close all categories except the initial category
+    var $initCategory = $initServiceNav.closest(".category");
+    $initCategory.siblings(".category").addClass("closed");
 
     // Change services section on nav click
     $("#services_nav").on("click", "li", function() {
@@ -247,6 +251,16 @@ missing_desc: <p>Coming Soon...</p>
 
       $("#services_nav li").removeClass("selected")
       $(this).addClass("selected")
+    });
+
+    // Hide/Show category contents on click
+    $("#services_nav").on("click", ".category > .header", function() {
+      var $category = $(this).closest(".category");
+      if ($category.hasClass("closed")) {
+        $category.removeClass("closed");
+      } else {
+        $category.addClass("closed");
+      }
     });
   });
 </script>
