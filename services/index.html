@@ -8,6 +8,34 @@ missing_desc: <p>Coming Soon...</p>
 <div id="services_container">
   <nav id="services_nav">
     <div class="category">
+      <span class="header">Colonoscopy/EGD</span>
+      <ul>
+        <li data-desc-id="colonoscopy">
+          Colonoscopy
+        </li>
+        <li data-desc-id="egd">
+          EGD
+        </li>
+        <li data-desc-id="colon_screening">
+          Colon Screening Info
+        </li>
+      </ul>
+    </div>
+    <div class="category">
+      <span class="header">Laproscopic Surgery</span>
+      <ul>
+        <li data-desc-id="laparoscopic_gallbladder">
+          Gallbladder
+        </li>
+        <li data-desc-id="appendectomy">
+          Appendectomy
+        </li>
+        <li data-desc-id="laproscopic_hernia">
+          Hernia
+        </li>
+      </ul>
+    </div>
+    <div class="category">
       <span class="header">General Surgery</span>
       <ul>
         <li data-desc-id="general_colon" class="missing_info">
@@ -27,34 +55,6 @@ missing_desc: <p>Coming Soon...</p>
         </li>
         <li data-desc-id="amputation" class="missing_info">
           Amputation
-        </li>
-      </ul>
-    </div>
-    <div class="category">
-      <span class="header">Laproscopic Surgery</span>
-      <ul>
-        <li data-desc-id="laparoscopic_gallbladder">
-          Gallbladder
-        </li>
-        <li data-desc-id="appendectomy">
-          Appendectomy
-        </li>
-        <li data-desc-id="laproscopic_hernia">
-          Hernia
-        </li>
-      </ul>
-    </div>
-    <div class="category">
-      <span class="header">Colonoscopy/EGD</span>
-      <ul>
-        <li data-desc-id="colonoscopy" class="missing_info">
-          Colonoscopy
-        </li>
-        <li data-desc-id="egd">
-          EGD
-        </li>
-        <li data-desc-id="colon_screening">
-          Colon Screening Info
         </li>
       </ul>
     </div>
@@ -128,6 +128,28 @@ missing_desc: <p>Coming Soon...</p>
   </nav>
 
   <section id="service_descriptions">
+    <!-- Colonoscopy/EGD -->
+    <div id="colonoscopy">
+      {% include services/colonoscopy.html %}
+    </div>
+    <div id="egd">
+      {% include services/egd.html %}
+    </div>
+    <div id="colon_screening">
+      {% include services/colorectal.html %}
+    </div>
+
+    <!-- Laproscopic Surgery -->
+    <div id="laparoscopic_gallbladder">
+      {% include services/gallbladder_surgery.html %}
+    </div>
+    <div id="appendectomy">
+      {% include services/appendectomy.html %}
+    </div>
+    <div id="laproscopic_hernia">
+      {% include services/hernia_surgery.html %}
+    </div>
+
     <!-- General Surgery -->
     <div id="general_colon">
       {{ page.missing_desc }}
@@ -146,28 +168,6 @@ missing_desc: <p>Coming Soon...</p>
     </div>
     <div id="amputation">
       {{ page.missing_desc }}
-    </div>
-
-    <!-- Laproscopic Surgery -->
-    <div id="laparoscopic_gallbladder">
-      {% include services/gallbladder_surgery.html %}
-    </div>
-    <div id="appendectomy">
-      {% include services/appendectomy.html %}
-    </div>
-    <div id="laproscopic_hernia">
-      {% include services/hernia_surgery.html %}
-    </div>
-
-    <!-- Colonoscopy/EGD -->
-    <div id="colonoscopy">
-      {{ page.missing_desc }}
-    </div>
-    <div id="egd">
-      {% include services/egd.html %}
-    </div>
-    <div id="colon_screening">
-      {% include services/colorectal.html %}
     </div>
 
     <!-- Vein Surgery -->
