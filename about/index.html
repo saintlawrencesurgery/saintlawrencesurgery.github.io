@@ -5,38 +5,10 @@ nav_id: about
 ---
 
 <section class="physicians">
-  <div class="physician">
-    <img src="{{ site.baseurl }}/images/christopher-portrait.jpg" alt="christopher-portrait" />
-    Christopher Brandy, M.D.
-  </div>
-
-  <div class="physician">
-    <img src="{{ site.baseurl }}/images/kiri-portrait.jpg" alt="kiri-portrait" />
-    Kiri Brandy, M.D.
-  </div>
-
-  <div class="physician">
-    <img src="{{ site.baseurl }}/images/noah-portrait.jpg" alt="noah-portrait" />
-    Noah Zuker, M.D.
-  </div>
-
-  <div class="physician">
-    <img src="{{ site.baseurl }}/images/karen-portrait.jpg" alt="karen-portrait" />
-    Karen Galvan, M.D.
-  </div>
-
-  <div class="physician">
-    <img src="{{ site.baseurl }}/images/allison-portrait.jpg" alt="allison-portrait" />
-    Allison Smith, RPA-C
-  </div>
-
-  <div class="physician">
-    <img src="{{ site.baseurl }}/images/chris-portrait.jpg" alt="chris-portrait" />
-    Chris LaPoint, RPA-C
-  </div>
-
-  <div class="physician">
-    <img src="{{ site.baseurl }}/images/alicia-portrait.jpg" alt="alicia-portrait" />
-    Alicia Flint, RPA-C
-  </div>
+  {% for physician in site.data.physicians %}
+    <div class="physician">
+      <img src="{{ site.baseurl }}/images/{{ physician.portrait_filename }}" alt="{{ physician.portrait_alt }}" />
+      {{ physician.name }}, {{ physician.title }}
+    </div>
+  {% endfor %}
 </section>

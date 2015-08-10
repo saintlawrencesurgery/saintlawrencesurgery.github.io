@@ -1,0 +1,34 @@
+- name: Christopher Brandy
+  title: M.D.
+  portrait_filename: christopher-portrait.jpg
+  portrait_alt: christopher-portrait
+
+- name: Kiri Brandy
+  title: M.D.
+  portrait_filename: kiri-portrait.jpg
+  portrait_alt: kiri-portrait
+
+- name: Noah Zuker
+  title: M.D.
+  portrait_filename: noah-portrait.jpg
+  portrait_alt: noah-portrait
+
+- name: Karen Galvan
+  title: M.D.
+  portrait_filename: karen-portrait.jpg
+  portrait_alt: karen-portrait
+
+- name: Allison Smith
+  title: RPA-C
+  portrait_filename: allison-portrait.jpg
+  portrait_alt: allison-portrait
+
+- name: Chris LaPoint
+  title: RPA-C
+  portrait_filename: chris-portrait.jpg
+  portrait_alt: chris-portrait
+
+- name: Alicia Flint
+  title: RPA-C
+  portrait_filename: alicia-portrait.jpg
+  portrait_alt: alicia-portrait
