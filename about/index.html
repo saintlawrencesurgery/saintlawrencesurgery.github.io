@@ -7,8 +7,15 @@ nav_id: about
 <section class="physicians">
   {% for physician in site.data.physicians %}
     <div class="physician">
-      <img src="{{ site.baseurl }}/images/{{ physician.portrait_filename }}" alt="{{ physician.portrait_alt }}" />
-      {{ physician.name }}, {{ physician.title }}
+      <div class="header">
+        {{ physician.name }}, {{ physician.title }}
+      </div>
+      <div class="portrait">
+        <img src="{{ site.baseurl }}/images/{{ physician.portrait_filename }}" alt="{{ physician.portrait_alt }}" />
+      </div>
+      <div class="bio">
+        {{ physician.bio }}
+      </div>
     </div>
   {% endfor %}
 </section>
