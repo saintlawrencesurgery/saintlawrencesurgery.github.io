@@ -89,8 +89,29 @@ missing_desc: <p>Coming Soon...</p>
     <div class="category">
       <span class="header">Skin Lesions</span>
       <ul>
-        <li data-desc-id="skin_cancer_types" class="missing_info">
-          Skin Cancer Types
+        <li data-desc-id="skin_biopsy">
+          Skin Biopsy
+        </li>
+        <li data-desc-id="skin_bcc">
+          Basal cell carcinoma (BCC)
+        </li>
+        <li data-desc-id="skin_ak">
+          Actinic keratosis (AK)
+        </li>
+        <li data-desc-id="skin_scc">
+          Squamous cell carcinoma (SCC)
+        </li>
+        <li data-desc-id="skin_spot_the_diff">
+          Spot the Difference
+        </li>
+        <li data-desc-id="skin_pilonidal">
+          Pilonidal Disease
+        </li>
+        <li data-desc-id="skin_telangiectasia">
+          Telangiectasia
+        </li>
+        <li data-desc-id="skin_viral_warts">
+          Viral Warts
         </li>
       </ul>
     </div>
@@ -175,9 +196,30 @@ missing_desc: <p>Coming Soon...</p>
       {% include services/axillary_node_dissection.html %}
     </div>
 
-    <!-- Skin Legions -->
-    <div id="skin_cancer_types">
-      {{ page.missing_desc }}
+    <!-- Skin Lesions -->
+    <div id="skin_biopsy">
+      {% include services/skin_biopsy.html %}
+    </div>
+    <div id="skin_bcc">
+      {% include services/skin_bcc.html %}
+    </div>
+    <div id="skin_ak">
+      {% include services/skin_ak.html %}
+    </div>
+    <div id="skin_scc">
+      {% include services/skin_scc.html %}
+    </div>
+    <div id="skin_spot_the_diff">
+      {% include services/skin_spot_the_difference.html %}
+    </div>
+    <div id="skin_pilonidal">
+      {% include services/skin_pilonidal.html %}
+    </div>
+    <div id="skin_telangiectasia">
+      {% include services/skin_telangiectasia.html %}
+    </div>
+    <div id="skin_viral_warts">
+      {% include services/skin_viral_warts.html %}
     </div>
 
     <!-- Laser -->

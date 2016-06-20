@@ -51,7 +51,19 @@
 #service_descriptions {
   margin-left: 18em;
   padding-left: 1em;
-  div {
+  > div {
     display: none;
+  }
+  .images {
+    width: 100%;
+    th {
+      text-align: center;
+    }
+    td {
+      text-align: center;
+    }
+    img {
+      max-width: 100%;
+    }
   }
 }
