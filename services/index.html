@@ -41,10 +41,10 @@ missing_desc: <p>Coming Soon...</p>
         <li data-desc-id="general_colon" class="missing_info">
           Colon
         </li>
-        <li data-desc-id="general_gallbladder" class="missing_info">
+        <li data-desc-id="general_gallbladder">
           Gallbladder
         </li>
-        <li data-desc-id="general_hernia" class="missing_info">
+        <li data-desc-id="general_hernia">
           Hernia
         </li>
         <li data-desc-id="pilonidal_cyst" class="missing_info">
@@ -130,7 +130,7 @@ missing_desc: <p>Coming Soon...</p>
       {% include services/appendectomy.html %}
     </div>
     <div id="laproscopic_hernia">
-      {% include services/hernia_surgery.html %}
+      {% include services/laproscopic_hernia_surgery.html %}
     </div>
 
     <!-- General Surgery -->
@@ -138,10 +138,10 @@ missing_desc: <p>Coming Soon...</p>
       {{ page.missing_desc }}
     </div>
     <div id="general_gallbladder">
-      {{ page.missing_desc }}
+      {% include services/open_gallbladder_surgery.html %}
     </div>
     <div id="general_hernia">
-      {{ page.missing_desc }}
+      {% include services/general_hernia_surgery.html %}
     </div>
     <div id="pilonidal_cyst">
       {{ page.missing_desc }}
