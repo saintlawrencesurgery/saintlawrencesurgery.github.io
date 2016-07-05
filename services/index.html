@@ -47,7 +47,7 @@ missing_desc: <p>Coming Soon...</p>
         <li data-desc-id="general_hernia">
           Hernia
         </li>
-        <li data-desc-id="pilonidal_cyst" class="missing_info">
+          <li data-desc-id="pilonidal_cyst">
           Pilonidal Cyst
         </li>
         <li data-desc-id="hemorrhoids">
@@ -101,11 +101,8 @@ missing_desc: <p>Coming Soon...</p>
         <li data-desc-id="skin_scc">
           Squamous cell carcinoma (SCC)
         </li>
-        <li data-desc-id="skin_spot_the_diff">
-          Spot the Difference
-        </li>
-        <li data-desc-id="skin_pilonidal">
-          Pilonidal Disease
+        <li data-desc-id="skin_melanoma">
+          Melanoma
         </li>
         <li data-desc-id="skin_telangiectasia">
           Telangiectasia
@@ -165,7 +162,7 @@ missing_desc: <p>Coming Soon...</p>
       {% include services/general_hernia_surgery.html %}
     </div>
     <div id="pilonidal_cyst">
-      {{ page.missing_desc }}
+      {% include services/skin_pilonidal.html %}
     </div>
     <div id="hemorrhoids">
       {% include services/hemorrhoids.html %}
@@ -209,11 +206,8 @@ missing_desc: <p>Coming Soon...</p>
     <div id="skin_scc">
       {% include services/skin_scc.html %}
     </div>
-    <div id="skin_spot_the_diff">
-      {% include services/skin_spot_the_difference.html %}
-    </div>
-    <div id="skin_pilonidal">
-      {% include services/skin_pilonidal.html %}
+    <div id="skin_melanoma">
+      {% include services/skin_melanoma.html %}
     </div>
     <div id="skin_telangiectasia">
       {% include services/skin_telangiectasia.html %}
