@@ -2,7 +2,6 @@
 layout: default
 title: Services Provided
 nav_id: services
-missing_desc: <p>Coming Soon...</p>
 ---
 
 <div id="services_container">
@@ -223,7 +222,7 @@ missing_desc: <p>Coming Soon...</p>
 <script>
   $(function() {
     // on page load show the first description
-    $initServiceNav = $("#services_nav li:not(.missing_info):first");
+    $initServiceNav = $("#services_nav li:first");
     $("#service_descriptions #" + $initServiceNav.data("desc-id")).show();
     $initServiceNav.addClass('selected');
 

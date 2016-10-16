@@ -25,9 +25,6 @@
       margin: .5em 0 1em 0;
       li {
         padding: .25em;
-        &.missing_info {
-          color: red
-        }
       }
       li.selected, li:hover {
         background-color: #919191;
