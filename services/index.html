@@ -115,14 +115,8 @@ missing_desc: <p>Coming Soon...</p>
     <div class="category">
       <span class="header">Laser</span>
       <ul>
-        <li data-desc-id="warts" class="missing_info">
+        <li data-desc-id="laser_warts">
           Warts
-        </li>
-        <li data-desc-id="spider_veins" class="missing_info">
-          Spider Veins
-        </li>
-        <li data-desc-id="cosmetic" class="missing_info">
-          Cosmetic
         </li>
       </ul>
     </div>
@@ -217,14 +211,8 @@ missing_desc: <p>Coming Soon...</p>
     </div>
 
     <!-- Laser -->
-    <div id="warts">
-      {{ page.missing_desc }}
-    </div>
-    <div id="spider_veins">
-      {{ page.missing_desc }}
-    </div>
-    <div id="cosmetic">
-      {{ page.missing_desc }}
+    <div id="laser_warts">
+      {% include services/laser_warts.html %}
     </div>
 
 <!-- Removed for now
